@@ -1,0 +1,273 @@
+/* body 레이아웃 */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header의 레이아웃 */
+.head--container {
+    width: 1000px;
+    height: 70px;
+    margin: 15px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("https://picsum.photos/id/85/1000/300");
+}
+
+.title {
+    display: flex;
+    flex-direction: row;   
+}
+
+.title--logo {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.title--logo--settings{
+    font-size: 1.5rem;
+    margin-left: 5px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    margin-right: 50px;
+}
+
+.nav--item {
+    font-size: 2rem;
+}
+
+#nav--instagram {
+    margin-right: 15px;
+    color: transparent;
+    background-image: linear-gradient(to right bottom, rgb(127, 24, 254), rgb(251, 28, 166), rgb(254, 202, 0));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#nav--youtube {
+    text-shadow: 0px 0px 2px black;
+    -webkit-text-fill-color: red;
+}
+
+/* -- main section의 레이아웃 -- */
+.main--container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* 1. nav containr 의 레이아웃 */
+.nav--container {
+    height: 230px;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #e3e3e3;
+    border-radius: 10px;
+}
+
+.nav--main {
+    height: 90%;
+    width: 85%;
+}
+
+.nav--main--title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.nav--title--text a {
+    color: #bbbbbb;
+}
+
+.nav--title--text a:hover, .nav--title--text a:focus {
+    color: black;
+    font-weight: bold;
+}
+
+.skill--tag--list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.skill--tag {
+    margin-bottom: 3px;
+}
+
+.skill--tag a {
+    color: #bbbbbb;
+}
+
+.skill--tag a:hover, .skill--tag a:focus {
+    color: black;
+    font-weight: bold;
+}
+
+.main--content--container {
+    width: 730px;
+    margin-left: 50px;
+}
+
+.main--content--head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main--content--title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 30px;
+}
+
+#content--count {
+    color: orangered;
+    font-weight: bold;
+}
+
+.fa-pen-to-square {
+    font-size: 1.5rem;
+}
+
+.main--content--body, .content--list{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content {
+    width: 165px;
+    margin-right: 17px;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.content--card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content--body {
+    padding: 10px;
+}
+
+.content--img img {
+    height: 165px;
+    width: 165px;
+}
+
+.content--text {
+    height: 55px;
+    padding: 10px;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.content--date {
+    padding-left: 20px;
+    color: #8a8a8a;
+}
+
+/* 하단부 페이지 이동 부분 */
+.bottom--content--container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    margin: 30px;
+}
+
+.pre--content {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-right: 50px;
+}
+
+.pre--content a {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.pre--content a:focus {
+    color: rgb(0, 214, 143);
+    font-weight: bold;
+}
+
+.fa-chevron-left {
+    margin-right: 10px;
+}
+
+.page--num--list--container {
+    width: 400px;
+}
+
+.page--num--list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.page--num a:visited {
+    color: black;
+}
+
+.page--num a:hover {
+    color: rgb(0, 214, 143);
+}
+
+.page--num a:focus {
+    color: rgb(0, 214, 143);
+    font-weight: bold;
+}
+
+
+.next--content {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-left: 50px;
+}
+
+.next--content a {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.fa-chevron-right {
+    margin-left: 10px;
+}
+
+.next--content a:focus {
+    color: rgb(0, 214, 143);
+    font-weight: bold;
+}
