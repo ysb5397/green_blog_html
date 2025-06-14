@@ -8,6 +8,7 @@
     <link rel="icon" href="/img/favicon.png">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/main.js"></script>
 
     <link
       rel="stylesheet"
@@ -26,7 +27,7 @@
                 </div>
                 <div class="title--logo--settings">
                     <a href="#">
-                        <i class="fas fa-solid fa-gear" onclick=""></i>
+                        <i class="fas fa-solid fa-gear" onclick="modalOpen()"></i>
                     </a>
                 </div>
             </div>
@@ -44,7 +45,137 @@
             </div>
         </div>
     </header>
-    <section>
+    <section class="logo--modal invisible">
+        <div class="logo--setting--modal">
+            <div class="logo--setting--modal--container">
+                <div class="logo--setting--name--container">
+                    <div class="setting--name">
+                        <label for="input--name">블로그명</label>
+                    </div>
+                    <div class="setting--name--input--container">
+                        <div class="setting--name--input">
+                            <input type="text" placeholder="Green's Blog" minlength="4" maxlength="25" id="input--name">
+                        </div>
+                        <div class="setting--name--desc">
+                            <p>한글, 영문, 숫자 혼용가능 (4~25 글자 사이)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="logo--setting--banner--container">
+                    <div class="logo--setting--banner">
+                        <p>블로그 상단 배경<p>
+                    </div>
+                    <div class="setting--banner--container">
+                        <div class="setting--banner">
+                            <div class="setting--banner--attach">
+                                <label for="img--attach--input" id="img--attach--label">이미지 등록</label>
+                                <input type="file" id="img--attach--input" onchange="uploadImage(this)">
+                            </div>
+                            <div class="setting--banner--attach--info">
+                                <div class="banner--img--info">
+                                    <p id="attach--file--name">샘플 이미지.png</p>
+                                </div>
+                                <div class="banner--img--clear invisible">
+                                    <a href="#">
+                                        <i class="fa-solid fa-trash" onclick="deleteImage()"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setting--banner--desc">
+                            <p>가로 1000px, 세로 80~300px</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social--link--container">
+                    <div class="social--link">
+                        <label for="input--youtube--link">YouTube URL</label>
+                    </div>
+                    <div class="social--link--input--container">
+                        <div class="social--link--input">
+                            <input type="text" value="http://www.youtube.com/@" placeholder="http://www.youtube.com/@UserID" id="input--youtube--link">
+                        </div>
+                        <div class="social--link--desc">
+                            <p>User ID 입력</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social--link--container">
+                    <div class="social--link">
+                        <label for="input--insta--link">Instagram URL</label>
+                    </div>
+                    <div class="social--link--input--container">
+                        <div class="social--link--input">
+                            <input type="text" value="http://www.instagram.com/" placeholder="http://www.instagram.com/UserID" id="input--insta--link">
+                        </div>
+                        <div class="social--link--desc">
+                            <p>User ID 입력</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal--button--container">
+                    <div class="cancel--button--container">
+                        <button onclick="modalClose()" id="cancel--btn">취소</button>
+                    </div>
+                    <div class="confirm--button--container">
+                        <button onclick="" id="confirm--btn">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="skill--modal invisible">
+        <div class="skill--setting--modal">
+            <div class="skill--setting--modal--container">
+                <div>
+                    <div>
+                        <button>+ 추가</button>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                Python
+                            </div>
+                            <div>
+
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                Java
+                            </div>
+                            <div>
+
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                ios
+                            </div>
+                            <div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>- 카테고리는 최대 20개 까지만 설정 가능</p>
+                        <p>- 글자 수는 20자 이내(공백 포함)</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <button>취소</button>
+                    </div>
+                    <div>
+                        <button>확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main">
         <div class="main--container">
             <div class="nav--container">
                 <div class="nav--main">
