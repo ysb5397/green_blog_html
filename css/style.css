@@ -71,6 +71,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: #727272a1;
+    z-index: 1;
 }
 
 .logo--modal.invisible, .invisible > .logo--setting--modal {
@@ -228,8 +229,114 @@ body {
 }
 
 /* skill modal */
+.skill--modal {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #727272a1;
+    z-index: 1;
+}
+
 .skill--modal.invisible, .invisible > .skill--setting--modal {
     display: none;
+}
+
+.skill--setting--modal--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 700px;
+    padding: 0 30px;
+    background-color: white;
+    border-radius: 20px;
+    gap: 10px;
+}
+
+.skill--setting--add--container {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 10%;
+}
+
+#skill--add--btn {
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.skill--setting--container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    gap: 10px;
+}
+
+.skill--setting--list--container {
+    height: 90%;
+    border: 1px solid #BEBEBE;
+}
+
+.skill--setting--list {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    margin: 30px;
+    gap: 10px;
+}
+
+.skill--setting--tag--container {
+    width: 100%;
+}
+
+.skill--setting--tag--item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.skill--setting--tag--text {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: baseline;
+    width: 80%;
+    height: 25px;
+    padding: 5px;
+    border: 1px solid #B6B6B6;
+}
+
+.skill--setting--tag--text > input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+.skill--setting--desc {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    color: #AEAEAE;
+}
+
+.skill--setting--check--container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    gap: 10px;
 }
 
 /* -- main section의 레이아웃 -- */
@@ -237,18 +344,29 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    height: 100%;
 }
 
 /* 1. nav container 의 레이아웃 */
 .nav--container {
+    width: 170px;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.nav--move--container {
     height: 230px;
     width: 170px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 2px solid #e3e3e3;
     border-radius: 10px;
+    position: fixed;
+    z-index: 0;
 }
 
 .nav--main {
@@ -358,6 +476,7 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
+    line-clamp: 4;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
 }

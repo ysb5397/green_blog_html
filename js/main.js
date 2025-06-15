@@ -1,13 +1,29 @@
 // 모달 on/off 기능
+// logo 관련 모달
 let modal;
-function modalOpen() {
+function logoModalOpen() {
     modal = document.getElementsByClassName("logo--modal")[0];
     modal.classList.toggle("invisible");
+    document.querySelector('html').style.overflow = "hidden";
 }
 
-function modalClose() {
+function logoModalClose() {
     modal = document.getElementsByClassName("logo--modal")[0];
     modal.classList.toggle("invisible");
+    document.querySelector('html').style.overflow = "auto";
+}
+
+// skill 관련 모달
+function skillModalOpen() {
+    modal = document.getElementsByClassName("skill--modal")[0];
+    modal.classList.toggle("invisible");
+    document.querySelector('html').style.overflow = "hidden";
+}
+
+function skillModalClose() {
+    modal = document.getElementsByClassName("skill--modal")[0];
+    modal.classList.toggle("invisible");
+    document.querySelector('html').style.overflow = "auto";
 }
 
 // 모달 이미지 업로드

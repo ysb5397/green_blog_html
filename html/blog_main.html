@@ -27,7 +27,7 @@
                 </div>
                 <div class="title--logo--settings">
                     <a href="#">
-                        <i class="fas fa-solid fa-gear" onclick="modalOpen()"></i>
+                        <i class="fas fa-solid fa-gear" onclick="logoModalOpen()"></i>
                     </a>
                 </div>
             </div>
@@ -115,7 +115,7 @@
                 </div>
                 <div class="modal--button--container">
                     <div class="cancel--button--container">
-                        <button onclick="modalClose()" id="cancel--btn">취소</button>
+                        <button onclick="logoModalClose()" id="cancel--btn">취소</button>
                     </div>
                     <div class="confirm--button--container">
                         <button onclick="" id="confirm--btn">확인</button>
@@ -127,46 +127,54 @@
     <section class="skill--modal invisible">
         <div class="skill--setting--modal">
             <div class="skill--setting--modal--container">
-                <div>
-                    <div>
-                        <button>+ 추가</button>
+                <div class="skill--setting--add--container">
+                    <div class="skill--setting--add">
+                        <button id="skill--add--btn">+ 추가</button>
                     </div>
                 </div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                Python
+                <div class="skill--setting--container">
+                    <div class="skill--setting--list--container">
+                        <ul class="skill--setting--list">
+                            <div class="skill--setting--tag--container">
+                                <li class="skill--setting--tag--item">
+                                    <div class="skill--setting--tag--text">
+                                        <input type="text" value="Python" placeholder="카테고리 입력" maxlength="20">
+                                    </div>
+                                    <div>
+                                        <i class="fa-solid fa-xmark" onclick=""></i>
+                                    </div>
+                                </li>
                             </div>
-                            <div>
-
+                            <div class="skill--setting--tag--container">
+                                <li class="skill--setting--tag--item">
+                                    <div class="skill--setting--tag--text">
+                                        <input type="text" value="Java" placeholder="카테고리 입력" maxlength="20">
+                                    </div>
+                                    <div>
+                                        <i class="fa-solid fa-xmark" onclick=""></i>
+                                    </div>
+                                </li>
                             </div>
-                        </div>
-                        <div>
-                            <div>
-                                Java
+                            <div class="skill--setting--tag--container">
+                                <li class="skill--setting--tag--item">
+                                    <div class="skill--setting--tag--text">
+                                        <input type="text" value="ios" placeholder="카테고리 입력" maxlength="20">
+                                    </div>
+                                    <div>
+                                        <i class="fa-solid fa-xmark" onclick=""></i>
+                                    </div>
+                                </li>
                             </div>
-                            <div>
-
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                ios
-                            </div>
-                            <div>
-
-                            </div>
-                        </div>
+                        </ul>
                     </div>
-                    <div>
+                    <div class="skill--setting--desc">
                         <p>- 카테고리는 최대 20개 까지만 설정 가능</p>
                         <p>- 글자 수는 20자 이내(공백 포함)</p>
                     </div>
                 </div>
-                <div>
+                <div class="skill--setting--check--container">
                     <div>
-                        <button>취소</button>
+                        <button onclick="skillModalClose()">취소</button>
                     </div>
                     <div>
                         <button>확인</button>
@@ -178,50 +186,52 @@
     <section class="main">
         <div class="main--container">
             <div class="nav--container">
-                <div class="nav--main">
-                    <div class="nav--main--title">
-                        <div class="nav--title--text">
-                            <a href="#">전체보기</a>
+                <div class="nav--move--container">
+                    <div class="nav--main">
+                        <div class="nav--main--title">
+                            <div class="nav--title--text">
+                                <a href="#">전체보기</a>
+                            </div>
+                            <div class="nav--title--config">
+                                <a href="#">
+                                    <i class="fa-solid fa-gear" onclick="skillModalOpen()"></i>
+                                </a>
+                            </div>
                         </div>
-                        <div class="nav--title--config">
-                            <a href="#">
-                                <i class="fa-solid fa-gear" onclick=""></i>
-                            </a>
+                        <div class="nav--main--skill--tag">
+                            <ul class="skill--tag--list">
+                                <li class="skill--tag" id="skill--python">
+                                    <a href="#">Python (12)</a>
+                                </li>
+                                <li class="skill--tag" id="skill--java" >
+                                    <a href="#">Java (2)</a>
+                                </li>
+                                <li class="skill--tag" id="skill--ios">
+                                    <a href="#">ios (8)</a>
+                                </li>
+                                <li class="skill--tag" id="skill--software">
+                                    <a href="#">소프트웨어 자료 (26)</a>
+                                </li>
+                                <li class="skill--tag" id="skill--data">
+                                    <a href="#">자료구조 (8)</a>
+                                </li>
+                                <li class="skill--tag" id="skill--linux">
+                                    <a href="#">리눅스 (8)</a>
+                                </li>
+                                <li class="skill--tag" id="skill--git">
+                                    <a href="#">Git (4)</a>
+                                </li>
+                                <li class="skill--tag" id="skill--growing">
+                                    <a href="#">자기계발 (3)</a>
+                                </li>
+                                <li class="skill--tag" id="skill--operation">
+                                    <a href="#">경영전략 (20)</a>
+                                </li>
+                                <li class="skill--tag" id="skill--leader">
+                                    <a href="#">리더쉽 (7)</a>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
-                    <div class="nav--main--skill--tag">
-                        <ul class="skill--tag--list">
-                            <li class="skill--tag" id="skill--python">
-                                <a href="#">Python (12)</a>
-                            </li>
-                            <li class="skill--tag" id="skill--java" >
-                                <a href="#">Java (2)</a>
-                            </li>
-                            <li class="skill--tag" id="skill--ios">
-                                <a href="#">ios (8)</a>
-                            </li>
-                            <li class="skill--tag" id="skill--software">
-                                <a href="#">소프트웨어 자료 (26)</a>
-                            </li>
-                            <li class="skill--tag" id="skill--data">
-                                <a href="#">자료구조 (8)</a>
-                            </li>
-                            <li class="skill--tag" id="skill--linux">
-                                <a href="#">리눅스 (8)</a>
-                            </li>
-                            <li class="skill--tag" id="skill--git">
-                                <a href="#">Git (4)</a>
-                            </li>
-                            <li class="skill--tag" id="skill--growing">
-                                <a href="#">자기계발 (3)</a>
-                            </li>
-                            <li class="skill--tag" id="skill--operation">
-                                <a href="#">경영전략 (20)</a>
-                            </li>
-                            <li class="skill--tag" id="skill--leader">
-                                <a href="#">리더쉽 (7)</a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -233,8 +243,8 @@
                         <p id="content--count">20</p>
                     </div>
                     <div class="main--content--write">
-                        <a href="#">
-                            <i class="fa-regular fa-pen-to-square" onclick=""></i>
+                        <a href="blog_write.html">
+                            <i class="fa-regular fa-pen-to-square"></i>
                         </a>
                     </div>
                 </div>
