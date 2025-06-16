@@ -43,11 +43,11 @@ function uploadImage(input) {
         return fileName;
     }
     document.getElementsByClassName('banner--img--info')[0].innerHTML = `<p id="attach--file--name">${fileName}</p>`;
-    document.getElementsByClassName('banner--img--clear')[0].classList.toggle('invisible');
+    document.getElementsByClassName('banner--img--clear')[0].classList.remove('invisible');
 }
 
 function deleteImage() {
     document.getElementsByClassName('banner--img--info')[0].innerHTML = `<p id="attach--file--name">샘플 이미지.png</p>`;
-    document.getElementsByClassName('banner--img--clear')[0].classList.toggle('invisible');
+    document.getElementsByClassName('banner--img--clear')[0].classList.add('invisible');
     fileName = null;
 }
